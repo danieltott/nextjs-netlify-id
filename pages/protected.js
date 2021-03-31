@@ -38,6 +38,9 @@ export default function Protected() {
           <p className="description">
             Wow, secrets are super cool. Welcome {user?.user_metadata.full_name}!
           </p>
+<pre>
+{JSON.stringify(user,null,2)}
+</pre>
           <button
             onClick={() => {
               netlifyAuth.signout(() => {
